@@ -29,13 +29,13 @@ public class CustomAdapter extends ArrayAdapter {
 
         View rowView = inflater.inflate(layout_id, parent, false);
 
-        TextView tvName = rowView.findViewById(R.id.tvName);
-        TextView tvVersion = rowView.findViewById(R.id.tvVersion);
+        TextView tvTitle = rowView.findViewById(R.id.tvTitle);
+        TextView tvDate = rowView.findViewById(R.id.tvDate);
 
         ToDoItem currentVersion = versionList.get(position);
 
-        tvName.setText(currentVersion.getTitle());
-        tvVersion.setText(currentVersion.toString());
+        tvTitle.setText(currentVersion.getTitle());
+        tvDate.setText(currentVersion.toString());
 
         return rowView;
     }
